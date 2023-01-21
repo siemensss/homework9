@@ -14,15 +14,15 @@ public class Main {
 
     public static void tasks() {
         System.out.println("Задача 1");
-        int array[] = generateRandomArray();
+        int[] array = generateRandomArray();
         int totalPayout = 0;
         for (int i = 0; i < array.length; i++) {
             totalPayout = totalPayout + array[i];
         }
         System.out.println("Сумма трат за месяц составила " + totalPayout + " рублей");
         System.out.println("Задача 2");
-        int minPayout = 100_000_000;
-        int maxPayout = -1;
+        int minPayout = array[0];
+        int maxPayout = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] > maxPayout) {
                 maxPayout = array[i];
